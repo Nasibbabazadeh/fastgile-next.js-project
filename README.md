@@ -1,0 +1,1 @@
+# fastgile-next.js-project
