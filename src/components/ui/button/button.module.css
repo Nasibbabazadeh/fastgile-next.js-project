@@ -1,0 +1,66 @@
+.base {
+    display: inline-flex;
+    transition: all 0.3s ease-out;
+    border-radius: 12px;
+    font-weight: 500;
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.primary {
+    background-color: var(--color-primary);
+    color: white;
+    border: transparent;
+}
+
+.primary:hover {
+    background-color: var(--color-primary-hover);
+    cursor: pointer;
+}
+
+.secondary {
+    background-color: var(--color-primary-2);
+    color: white;
+    border: transparent;
+}
+
+.secondary:hover {
+    background-color: var(--color-primary-2-hover);
+    cursor: pointer;
+}
+
+.outline {
+    background-color: transparent;
+    color: var(--text-main);
+    border: var(--color-light-gray) solid 1px;
+}
+
+.outline:hover {
+    background-color: var(--color-light-gray-hover);
+    cursor: pointer;
+}
+
+.destructive {
+    background-color: var(--color-danger);
+    color: white;
+    border: transparent;
+}
+
+.destructive:hover {
+    background-color: var(--color-danger-hover);
+    cursor: pointer;
+}
+
+.small {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0.25rem 0.5rem;
+}
+
+.medium {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0.5rem 1rem;
+}

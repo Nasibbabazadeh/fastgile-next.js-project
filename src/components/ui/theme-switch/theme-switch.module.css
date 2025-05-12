@@ -1,0 +1,80 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.switch {
+    width: 90px;
+    height: 44px;
+    border-radius: 50px;
+    background-color: #87cefa;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.4s ease;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+    background: radial-gradient(circle at center, #fcd440 60%, #e0a800 90%);
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px #fff5cc;
+}
+
+/* Clouds and sky */
+.light {
+    background: linear-gradient(to right, #7ecdf3, #a7e0f8);
+}
+
+.light .icon {
+    background: radial-gradient(circle at center, #fcd440 60%, #f4b400 90%);
+    left: 4px;
+}
+
+/* Dark mode sky with stars and moon */
+.dark {
+    background: linear-gradient(to right, #1e1e2f, #12121b);
+}
+
+.dark .icon {
+    background: radial-gradient(circle at center, #bfc4d6 70%, #9499ab 100%);
+    left: 50px;
+    box-shadow: -6px -6px 0 0 #fff inset, 3px 3px 8px #0003;
+}
+
+/* Optional star effects in dark mode */
+.dark::before {
+    content: '✨✨✨';
+    position: absolute;
+    font-size: 12px;
+    left: 10px;
+    top: 8px;
+    color: #fff;
+    pointer-events: none;
+    animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
